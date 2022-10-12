@@ -218,7 +218,7 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.*/
 #endif
 
 #ifndef OBNC_VAL
-	#define OBNC_VAL(T, n) ((T) (n))
+	#define OBNC_VAL(T, n) (*(T *) &(n))
 #endif
 
 /*Type descriptor accessor*/
