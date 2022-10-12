@@ -10,6 +10,7 @@ in the [releases](https://github.com/amtoine/obnc/releases) tab.
 
 | version   | tag                                                             | branch                                                                         |
 | --------- | --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| +     dev |                                                                 | [dev](https://github.com/amtoine/obnc/tree/dev)                       |
 | * 0.16.1  | [v0.16.1](https://github.com/amtoine/obnc/releases/tag/v0.16.1) | [version/0.16.1](https://github.com/amtoine/obnc/tree/version/0.16.1) |
 |   0.16.0  | [v0.16.0](https://github.com/amtoine/obnc/releases/tag/v0.16.0) | [version/0.16.0](https://github.com/amtoine/obnc/tree/version/0.16.0) |
 |   0.15.3  | [v0.15.3](https://github.com/amtoine/obnc/releases/tag/v0.15.3) | [version/0.15.3](https://github.com/amtoine/obnc/tree/version/0.15.3) |
