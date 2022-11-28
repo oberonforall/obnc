@@ -1,0 +1,4 @@
+MODULE ProcessTest;
+  IMPORT Process;
+BEGIN
+END ProcessTest.

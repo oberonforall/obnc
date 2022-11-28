@@ -1,0 +1,12 @@
+MODULE Process;
+(*implemented in C*)
+
+  TYPE
+    Command* = ARRAY 256 OF CHAR;
+    Argument* = ARRAY 64 OF CHAR;
+
+  PROCEDURE Execute*(path: ARRAY OF CHAR; argv: ARRAY OF Argument): INTEGER;
+  RETURN 0
+  END Execute;
+
+END Process.
