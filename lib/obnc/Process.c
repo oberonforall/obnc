@@ -17,7 +17,7 @@
 long Process__Execute_(const char* path, OBNC_INTEGER path_len, const char argv[], OBNC_INTEGER argv_len, OBNC_INTEGER argv_len1)
 {
   int pid, status;
-  long code;
+  long code = 0;
 
   char* complete_argv[argv_len + 2];
 
@@ -36,7 +36,7 @@ long Process__Execute_(const char* path, OBNC_INTEGER path_len, const char argv[
       pid = wait(&status);
       break;
   }
-  return -1;
+  return code;
 }
 
 
