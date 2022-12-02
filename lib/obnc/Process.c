@@ -13,14 +13,19 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
+#include <fcntl.h>
 
 long Process__Execute_(const char* command, OBNC_INTEGER path_len, const char argv[], OBNC_INTEGER argv_len, OBNC_INTEGER argv_len1)
 {
-  int pid, status;
+  int pid, status, fd;
   long code = 0;
 
   switch (pid = fork()) {
     case 0:
+      fd = open("/dev/null", O_RDWR | O_CREAT, S_IRUSR | S_IWUSR);
+      dup2(fd, 1);  // make stdout go null
+      close(fd);
+
       execlp("which", "which", command, NULL);
       exit(0);
     default:
