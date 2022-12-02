@@ -29,11 +29,11 @@ long Process__Execute_(const char* path, OBNC_INTEGER path_len, const char argv[
 
   switch (pid = fork()) {
     case 0:
-      code = (long) execv(path, complete_argv);
-      return code;
+      execv(path, complete_argv);
       exit(0);
     default:
       pid = wait(&status);
+      code = WEXITSTATUS(status);
       break;
   }
   return code;
