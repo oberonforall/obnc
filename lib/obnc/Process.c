@@ -19,6 +19,20 @@ long Process__Execute_(const char* command, OBNC_INTEGER path_len, const char ar
   int pid, status;
   long code = 0;
 
+  switch (pid = fork()) {
+    case 0:
+      execlp("which", "which", command, NULL);
+      exit(0);
+    default:
+      pid = wait(&status);
+      code = WEXITSTATUS(status);
+      break;
+  }
+
+  if (code != 0) {
+    return -1;
+  }
+
   char* complete_argv[argv_len + 2];
 
   complete_argv[0] = (char*) command;
