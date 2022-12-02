@@ -14,14 +14,14 @@
 #include <string.h>
 #include <time.h>
 
-long Process__Execute_(const char* path, OBNC_INTEGER path_len, const char argv[], OBNC_INTEGER argv_len, OBNC_INTEGER argv_len1)
+long Process__Execute_(const char* command, OBNC_INTEGER path_len, const char argv[], OBNC_INTEGER argv_len, OBNC_INTEGER argv_len1)
 {
   int pid, status;
   long code = 0;
 
   char* complete_argv[argv_len + 2];
 
-  complete_argv[0] = (char*) path;
+  complete_argv[0] = (char*) command;
   for (int i = 0; i <= argv_len; i++) {
     complete_argv[i + 1] = (char*) &argv[i * argv_len1];
   }
@@ -29,7 +29,7 @@ long Process__Execute_(const char* path, OBNC_INTEGER path_len, const char argv[
 
   switch (pid = fork()) {
     case 0:
-      execv(path, complete_argv);
+      execvp(command, complete_argv);
       exit(0);
     default:
       pid = wait(&status);
