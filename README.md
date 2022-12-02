@@ -11,16 +11,14 @@ in the [releases](https://github.com/amtoine/obnc/releases) tab.
 ### Notes
 - `* 0.16.1` is the current official version of `obnc`
 - `+ dev` is based on `0.16.1` and might be unstable
-- `+ dev-clang` is based on `dev` and might be unstable.
+- `+ dev-exec` is based on `dev` and might be unstable
 this branch is used to write the first version of the `oberon` compiler.
-as we do not have access to system calls from the compiler itself and to avoid using an unsatisfying wrapper `bash` script to generate the final executable with `clang`, we choose to add a new `Clang` library to `obnc` and call `clang` from there with the `c` implementation.
-- `+ dev-exec` is based on `dev-clang` and might be unstable
-this branch generalizes the `Clang` module into an `Execute` module that allow Oberon modules to run any external process.
+as we do not have access to system calls from the compiler itself and to avoid using an unsatisfying wrapper `bash` script to generate the final executable with `clang`, we choose to add a new `Process` library to `obnc` and call `clang` from there with the `c` implementation.
+this branch defines a general `Execute` procedure that allows Oberon modules to run any external process.
 
 | version     | tag                                                             | branch                                                                |
 | ----------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
 | + dev-exec  |                                                                 | [dev-exec](https://github.com/amtoine/obnc/tree/dev-exec)             |
-| + dev-clang |                                                                 | [dev-clang](https://github.com/amtoine/obnc/tree/dev-clang)           |
 | + dev       |                                                                 | [dev](https://github.com/amtoine/obnc/tree/dev)                       |
 | * 0.16.1    | [v0.16.1](https://github.com/amtoine/obnc/releases/tag/v0.16.1) | [version/0.16.1](https://github.com/amtoine/obnc/tree/version/0.16.1) |
 |   0.16.0    | [v0.16.0](https://github.com/amtoine/obnc/releases/tag/v0.16.0) | [version/0.16.0](https://github.com/amtoine/obnc/tree/version/0.16.0) |
