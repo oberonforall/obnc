@@ -59,6 +59,11 @@ long Process__Execute_(const char* command, OBNC_INTEGER path_len, const char ar
 }
 
 
+void Process__Exit_(OBNC_INTEGER code) {
+  exit(code);
+}
+
+
 void Process__Init(void)
 {
 }

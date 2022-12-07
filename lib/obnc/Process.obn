@@ -9,4 +9,7 @@ MODULE Process;
   RETURN 0
   END Execute;
 
+  PROCEDURE Exit*(code: INTEGER);
+  END Exit;
+
 END Process.
