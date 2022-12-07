@@ -16,6 +16,9 @@ this branch is used to write the first version of the `oberon` compiler.
 as we do not have access to system calls from the compiler itself and to avoid using an unsatisfying wrapper `bash` script to generate the final executable with `clang`, we choose to add a new `Process` library to `obnc` and call `clang` from there with the `c` implementation.
 this branch defines a general `Execute` procedure that allows Oberon modules to run any external process.
 
+[cebea80](https://github.com/oberonforall/obnc/commit/cebea803b6d4f3fbc13ec5f7052f7b642c912769) defines a new `Process.Exit` procedure which takes a single `INTEGER` argument and exit with that code properly.
+Related to https://github.com/oberonforall/compiler/issues/131.
+
 | version     | tag                                                             | branch                                                                |
 | ----------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
 | + dev-exec  |                                                                 | [dev-exec](https://github.com/amtoine/obnc/tree/dev-exec)             |
