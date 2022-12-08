@@ -88,7 +88,7 @@ OBNC_INTEGER Process__Execute_(char* buffer, OBNC_INTEGER buffer_len, const char
         } else {
           buffer[size] = '\0';
         }
-      } else {
+      } else if (size < 0) {
         perror("read pipe");
         exit(EXIT_FAILURE);
       }
