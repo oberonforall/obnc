@@ -91,6 +91,8 @@ OBNC_INTEGER Process__Execute_(char* buffer, OBNC_INTEGER buffer_len, const char
       } else if (size < 0) {
         perror("read pipe");
         exit(EXIT_FAILURE);
+      } else {
+        buffer = "";
       }
       printf("");  // DO NOT REMOVE OR I WILL CRASH
       close(pfd[0]);
