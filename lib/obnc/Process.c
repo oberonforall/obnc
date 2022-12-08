@@ -78,9 +78,9 @@ OBNC_INTEGER Process__Execute_(char* buffer, OBNC_INTEGER buffer_len, const char
     default:  // parent
       close(pfd[1]);  // close unused write end
 
-      long size = read(pfd[0], buffer, 64);  // read the pipe
+      long size = read(pfd[0], buffer, buffer_len);  // read the pipe
 
-      if ( (size > 0) && (size < 64) ) {
+      if ( (size > 0) && (size < buffer_len) ) {
       // add a null character to the end of the buffer
         if (buffer[size - 1] == '\n') {
           // remove the trailing newline
