@@ -73,7 +73,7 @@ BuildCSource()
 Build()
 {
 	if [ -e "VERSION" ]; then
-		local version="$(cat VERSION)"
+		local version="$(cat VERSION)-$(git branch --show-current) ($(git rev-list --count HEAD)-$(git rev-parse --short HEAD))"
 	else
 		local version=
 	fi
