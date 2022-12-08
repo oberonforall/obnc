@@ -5,7 +5,7 @@ MODULE Process;
     Command* = ARRAY 256 OF CHAR;
     Argument* = ARRAY 64 OF CHAR;
 
-  PROCEDURE Execute*(VAR stdout: ARRAY OF CHAR; argv: ARRAY OF Argument): INTEGER;
+  PROCEDURE Execute*(VAR stdout: ARRAY OF CHAR; command: ARRAY OF CHAR; argv: ARRAY OF Argument): INTEGER;
   RETURN 0
   END Execute;
 

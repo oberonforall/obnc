@@ -16,7 +16,7 @@
 #include <fcntl.h>
 
 
-OBNC_INTEGER execute(char* buffer, const char* command, OBNC_INTEGER command_len, const char argv[], OBNC_INTEGER argv_len, OBNC_INTEGER argv_len1)
+OBNC_INTEGER execute(char* buffer, OBNC_INTEGER buffer_len, const char* command, OBNC_INTEGER command_len, const char argv[], OBNC_INTEGER argv_len, OBNC_INTEGER argv_len1)
 {
   OBNC_INTEGER code;
   int pid, status, fd;
