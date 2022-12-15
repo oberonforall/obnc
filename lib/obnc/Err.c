@@ -10,7 +10,7 @@ void Err__Open_(void)
 
 void Err__Char_(char ch)
 {
-	putchar(ch);
+	putc(ch, stderr);
 }
 
 
@@ -20,7 +20,7 @@ void Err__String_(const char s[], OBNC_INTEGER sLen)
 
 	i = 0;
 	while ((i < sLen) && (s[i] != '\0')) {
-		putchar(s[i]);
+		putc(s[i], stderr);
 		i++;
 	}
 }
@@ -28,25 +28,25 @@ void Err__String_(const char s[], OBNC_INTEGER sLen)
 
 void Err__Int_(OBNC_INTEGER i, OBNC_INTEGER n)
 {
-	OBNC_WriteInt(i, n, stdout);
+	OBNC_WriteInt(i, n, stderr);
 }
 
 
 void Err__Hex_(OBNC_INTEGER i)
 {
-	OBNC_WriteHex((unsigned OBNC_INTEGER) i, stdout);
+	OBNC_WriteHex((unsigned OBNC_INTEGER) i, stderr);
 }
 
 
 void Err__Real_(OBNC_REAL x, OBNC_INTEGER n)
 {
-	printf("%*" OBNC_REAL_MOD_W "E", (int) n, x);
+	fprintf(stderr, "%*" OBNC_REAL_MOD_W "E", (int) n, x);
 }
 
 
 void Err__Ln_(void)
 {
-	putchar('\n');
+	putc('\n', stderr);
 }
 
 
