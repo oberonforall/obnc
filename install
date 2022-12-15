@@ -26,7 +26,7 @@ destdir=
 includeLibCSrc=false
 
 readonly scripts="obncdoc-extract obncdoc-index obncdoc-markup"
-readonly basicModules="Files Process In Input Input0 Math Out Strings XYplane"
+readonly basicModules="Files Process In Input Input0 Math Out Err Strings XYplane"
 readonly docFiles="oberon-report.html"
 readonly man1Files="obnc.1 obnc-compile.1 obnc-path.1 obncdoc.1"
 
