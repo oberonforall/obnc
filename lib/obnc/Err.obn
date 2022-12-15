@@ -1,13 +1,6 @@
-(*Copyright (C) 2017, 2018, 2019 Karl Landstrom <karl@miasap.se>
+MODULE Err;
+(**Output to the standard error stream *)
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at http://mozilla.org/MPL/2.0/.*)
-
-MODULE Out;
-(**Output to the standard output stream
-
-Implements the basic library module from "The Oakwood Guidelines for Oberon-2 Compiler Developers".*)
 
 (*implemented in C*)
 
@@ -45,4 +38,4 @@ Implements the basic library module from "The Oakwood Guidelines for Oberon-2 Co
 (**writes an end-of-line symbol to the end of the output stream*)
 	END Ln;
 
-END Out.
+END Err.
