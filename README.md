@@ -1,5 +1,5 @@
 # obnc
-A compiler for Niklaus Wirth’s programming language Oberon.
+Karl Landström's transpiler for Niklaus Wirth’s programming language Oberon.
 Forked from [miasap/obnc](http://miasap.se/obnc/) and
 [GunterMueller](https://github.com/GunterMueller/OBNC).
 
