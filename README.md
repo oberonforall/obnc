@@ -22,8 +22,8 @@ this branch defines a general `Execute` procedure that allows Oberon modules to 
 this branch implements a clone of the `Out` module, called `Err`, which prints to `stderr` instead of `stdout`.
 > see `dev-exec..dev-err`
 
-[cebea80](https://github.com/oberonforall/obnc/commit/cebea803b6d4f3fbc13ec5f7052f7b642c912769) defines a new `Process.Exit` procedure which takes a single `INTEGER` argument and exit with that code properly.
-Related to https://github.com/oberonforall/compiler/issues/131.
+cebea80 defines a new `Process.Exit` procedure which takes a single `INTEGER` argument and exit with that code properly.
+Related to [`oberonforall/compiler#131`](https://github.com/oberonforall/compiler/issues/131).
 
 | version     | tag                                                             | branch                                                                |
 | ----------- | --------------------------------------------------------------- | --------------------------------------------------------------------- |
