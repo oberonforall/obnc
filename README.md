@@ -12,15 +12,15 @@ in the [releases](https://github.com/amtoine/obnc/releases) tab.
 - `* 0.16.1` is the current official version of `obnc`
 - `+ dev` is based on `0.16.1` and might be unstable
 this branch fixes a bug in the `SYSTEM.VAL()` conversion procedure, about `c` pointer casting.
-> see [`v0.16.1..dev`](https://github.com/oberonforall/compiler/compare/v0.16.1..dev)
+> see [`v0.16.1..dev`](https://github.com/oberonforall/obnc/compare/v0.16.1..dev)
 - `+ dev-exec` is based on `dev` and might be unstable
 this branch is used to write the first version of the `oberon` compiler.
 as we do not have access to system calls from the compiler itself and to avoid using an unsatisfying wrapper `bash` script to generate the final executable with `clang`, we choose to add a new `Process` library to `obnc` and call `clang` from there with the `c` implementation.
 this branch defines a general `Execute` procedure that allows Oberon modules to run any external process.
-> see [`dev..dev-exec`](https://github.com/oberonforall/compiler/compare/dev..dev-exec)
+> see [`dev..dev-exec`](https://github.com/oberonforall/obnc/compare/dev..dev-exec)
 - `+ dev-err` is based on `dev-exec` and might be unstable
 this branch implements a clone of the `Out` module, called `Err`, which prints to `stderr` instead of `stdout`.
-> see [`dev-exec..dev-err`](https://github.com/oberonforall/compiler/compare/dev-exec..dev-err)
+> see [`dev-exec..dev-err`](https://github.com/oberonforall/obnc/compare/dev-exec..dev-err)
 
 [`cebea80`](https://github.com/oberonforall/obnc/commit/cebea803b6d4f3fbc13ec5f7052f7b642c912769) defines a new `Process.Exit` procedure which takes a single `INTEGER` argument and exit with that code properly.
 Related to [`oberonforall/compiler#131`](https://github.com/oberonforall/compiler/issues/131).
